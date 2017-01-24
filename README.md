@@ -3,7 +3,7 @@ These are projects done through the Udemy Course of The Complete Web Developer 2
 
 I will just be adding links to the websites and also to my github repos. 
 
-Project 1: Create a basic HTML site without any CSS. 
+Project 1: Create a basic HTML site without any CSS. Didn't do a github repo as I think the code is too basic. 
 
 Here is the link http://79.170.44.135/lorefirstsitecwd2.com/
 
