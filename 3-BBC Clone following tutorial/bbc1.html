@@ -246,6 +246,7 @@
 
 			color:#5a5a5a;
 			width: 260px;
+			float:left;
 		}
 		
 
@@ -254,7 +255,7 @@
 			width: 15px;
 		}
 
-		#article-summary a {
+		#topic-link  {
 
 			text-decoration: none;
 			color: #A91717;
@@ -271,6 +272,34 @@
 		#date {
 
 			padding-right: 10px;
+		}
+
+		#article-container {
+
+			float:left;
+			width: 700px;
+			border-right: 1px solid #CCCCCC;
+			padding-right: 10px;
+		}
+
+		#main-article-image {
+
+			width: 350px;
+			margin-left: 20px;
+		}
+
+		#article-hr {
+
+			border-top:1px solid #A91717;
+			width: 50px;
+
+		}
+
+		.article-link {
+
+			color:black;
+			text-decoration: none;
+
 		}
 
 
@@ -426,14 +455,24 @@
 		
 		<h2>Technology</h2>
 
-		<h3><a href="">Asda bug exposed payment details</a></h3>
+		<div id ="article-container">
+			<h3><a href="">Asda bug exposed payment details</a></h3>
 
 
-		<div id ="article-summary">
-		<p>Security vulnerabilities that put customers at risk have affected Asda's website for a couple of years, a security expert has revealed.</p>
+			<div id ="article-summary">
+			<p>Security vulnerabilities that put customers at risk have affected Asda's website for a couple of years, a security expert has revealed.</p>
 
 
-		<p><img id ="timer" src="images/timer.png"><span id = "date">19th January 2016</span> <a href="">Technology</a> </p>
+			<p><img id ="timer" src="images/timer.png"><span id = "date">19th January 2016</span> <a id ="topic-link" href="">Technology</a> </p>
+
+			<hr id = "article-hr" align="left">
+			<p><a class="article-link" href="">Surveillance firm hit in hack attack</a></p>
+
+			<p><a class="article-link" href="">eBay flaw has existed for months</a></p>
+
+		</div>
+
+		<img id ="main-article-image" src="images/asda.jpg">
 
 		</div>
 
