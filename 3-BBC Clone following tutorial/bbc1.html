@@ -245,14 +245,14 @@
 		#article-summary {
 
 			color:#5a5a5a;
-			width: 260px;
+			width: 300px;
 			float:left;
 		}
 		
 
-		#timer {
-
+		.timers {
 			width: 15px;
+			
 		}
 
 		#topic-link  {
@@ -269,22 +269,23 @@
 			color: #1167a8;
 		}
 
-		#date {
+		.date {
 
 			padding-right: 10px;
+			color: #5a5a5a;
 		}
 
 		#article-container {
 
 			float:left;
-			width: 700px;
+			width: 600px;
 			border-right: 1px solid #CCCCCC;
 			padding-right: 10px;
 		}
 
-		#main-article-image {
+		.clocks {
 
-			width: 350px;
+			width: 15px;
 			margin-left: 20px;
 		}
 
@@ -301,6 +302,53 @@
 			text-decoration: none;
 
 		}
+
+		#watch-listen {
+
+			margin-left: 20px;
+			width: 300px;
+			float: right;
+			position: relative;
+			right: 250px;
+		}
+
+		h4 {
+
+			font-weight: normal;
+			font-size: 20px;
+			margin-left: 50px;
+
+		}
+
+		.article-side-image {
+
+			float: left;
+			width: 90px;
+			margin-right: 10px;
+
+		}
+
+		.watch-listen-link {
+
+			color:black;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.watch-listen-link:hover {
+
+			color: #1167a8;
+		}
+
+		.side-article {
+
+			float:right;
+			width: 150px;
+			position: relative;
+			top:1px;
+		}
+
 
 
 		
@@ -463,7 +511,7 @@
 			<p>Security vulnerabilities that put customers at risk have affected Asda's website for a couple of years, a security expert has revealed.</p>
 
 
-			<p><img id ="timer" src="images/timer.png"><span id = "date">19th January 2016</span> <a id ="topic-link" href="">Technology</a> </p>
+			<p><img class="clocks timers" src="images/timer.png"><span class = "date">19th January 2016</span> <a id ="topic-link" href="">Technology</a> </p>
 
 			<hr id = "article-hr" align="left">
 			<p><a class="article-link" href="">Surveillance firm hit in hack attack</a></p>
@@ -480,6 +528,28 @@
 
 
 	</div>
+
+	<!-- <div class ="clear"></div> -->
+		<div id ="watch-listen">
+			
+			<h4>Watch/Listen</h4>
+
+			<img class="article-side-image" src="images/pic1.png">
+
+
+			<div class ="side-article">
+
+			<a class ="watch-listen-link" href="">UK science chief backs blockchains</a>
+			<!-- <img class="article-side-image" src="images/pic2.png">
+			<img class ="article-side-image" src="images/pic3.png"> -->
+
+			<p><img class="clocks timers" id ="timer" src="images/timer.png"><span class = "date">19th January 2016</span> <a id ="topic-link" href="">Technology</a> </p>
+
+			</div>
+
+		</div>
+
+
 
 
 	</div>
