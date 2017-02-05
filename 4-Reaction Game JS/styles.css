@@ -1,0 +1,23 @@
+body {
+
+		font-family: sans-serif;
+	}
+
+	#shape {
+
+		
+		background-color: red;
+		display: none;
+		position: relative;
+
+	}
+
+	.bold {
+
+		font-weight: bold;
+	}
+
+	.inline {
+
+		display: block;
+	}
