@@ -7,77 +7,120 @@
 	<script src= "jQuery/jquery-ui/jquery-ui.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="mycss.css">
+
+	
 </head>
 <body>
 
-<div id ="heading">
+	<div id ="header">
 
-<h1>CodePlayer</h1>
+		<div id ="logo">
+		Code Player
 
-	
-	<div id ="buttonInfo">
-		
-		<button id ="htmlButton" class ="buttons active">HTML</button>
-		<button id ="cssButton" class="buttons">CSS</button>
-		<button id ="jsButton" class="buttons">JavaScript</button>
-		<button id ="outputButton" class= "buttons active">Output</button>
+		</div>
+
+		<!-- buttons -->
+
+		<div id= "buttonContainer">
+			<div class= "toggleButton active"id ="html">HTML</div>
+
+			<div class= "toggleButton" id ="css">CSS</div>
+
+			<div class= "toggleButton" id ="javascript">JavaScript</div>
+
+			<div class= "toggleButton active" id ="output">Output</div>
+		</div>
+
 	</div>
 
 
-	
+	<div id ="bodyContainer">
 
-</div>
+	<!-- panels -->
 
-<textarea id ="htmlBar">Hello World!
-<p>This is some text</p>
+			<textarea id="htmlPanel" class="panel"><p id="paragraph">Hello World!</p></textarea>
 
-</textarea>
+			<textarea id="cssPanel" class="panel hidden">p {color: green;}</textarea>
 
-<textarea id="cssBar"></textarea>
+			<textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML="Hello Rob!";</textarea>
 
-<textarea id ="jsBar"></textarea>
+			<iframe id="outputPanel" class="panel"></iframe>
 
-<textarea id="outputBar"></textarea>
+	</div>
+
 
 <script type="text/javascript">
+
+// update info in the iframe
+
+function  updateOutput() {
+
+	// put info in iframe html and css
 	
-	var htmlinfo = $('#htmlBar').val();
-	var outputinfo = "";
+	$("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $('#cssPanel').val() + "</style></head><body>" + $('#htmlPanel').val() + "</body></html>");
 
-	console.log(htmlinfo);
+	// update javascript 
+		document.getElementById('outputPanel').contentWindow.eval($('#javascriptPanel').val());
 
-	$( "button" ).click(function() {
+		
+}
 
-  $( this ).toggleClass( "active" );
- if ( $(this).attr('id')  == 'htmlButton') {
+// hover change colors
+	
+$('.toggleButton').hover(function() {
 
- 		$('#htmlBar').toggle();
- }
+	$(this).addClass('highlightedButton');
+}, function () {
+	/* body... */
+	$(this).removeClass('highlightedButton');
+});
 
-  if ( $(this).attr('id')  == 'cssButton') {
+// when button clicked change styles and show or hide content
 
- 		$('#cssBar').toggle();
- }
+$('.toggleButton').click(function() {
+	/* Act on the event */
 
-if ( $(this).attr('id')  == 'jsButton') {
+	$(this).toggleClass("active");
 
- 		$('#jsBar').toggle();
- }
+	$(this).removeClass('highlightedButton');
 
- if ( $(this).attr('id')  == 'outputButton') {
+	var panelId = $(this).attr('id') + "Panel";
 
- 		$('#outputBar').toggle();
- 		
- 		
- }
+	// show or hide content
 
+	$("#" + panelId).toggleClass("hidden");
 
+	// resize based on number of panels
+
+	var numberofActivePanels = 4 -$('.hidden').length;
+
+	$('.panel').width(($(window).width() /numberofActivePanels) -10);
 
 });
 
-		
-	
+// on page load
+
+$('.panel').height($(window).height() - $("#header").height() - 15);
+
+$('.panel').width(($(window).width() /2) -10);
+
+
+updateOutput();
+
+
+
+// when info is changed on textarea then update the iframe using function above. 
+
+$("textarea").on('change keyup paste', function() {
+    
+    updateOutput();
+    
+});
+
+
+
 
 </script>
+
 </body>
-</html>
+

@@ -1,62 +1,88 @@
-body{
+		body {
 
+	font: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+
+#header {
+
+	width: 100%;
+	background-color: #eeeeee;
+	padding: 5px;
+	height: 30px;
+}
+
+#logo {
+
+	float: left;
+	font-weight: bold;
+	font-size: 120%;
+	padding: 3px 5px;
+}
+
+
+#buttonContainer {
+
+	width: 233px;
 	margin: 0 auto;
-	padding:  0 auto;
 }
 
-#heading {
+.toggleButton {
 
-	margin: 0 auto;
-	padding: 0 auto;
+	float: left;
+	border: 1px solid grey;
+	padding: 6px;
+	border-right: none;
+	font-size: 90%;
+}
 
-	background-color: lightgray;
-	height: 50px;
+#html {
+
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
 
 }
 
-h1 {
+#output {
 
-	margin: 0 auto;
-	padding: 0 auto;
-
-}
-
-#buttonInfo {
-
-	width: 400px;
-	margin-left: 35%;
-	position: absolute;
-	top: 0px;
-	
-	/*margin: 0 auto;
-	padding: 0 auto;*/
-	height: 50px;
-}
-
-button {
-
-	height: 50px;
-}
-.buttons {
-
-	
-color: black;
-
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right: 1px solid grey;
 }
 
 .active {
 
-	background-color: lightblue;
+	background-color: #ebf2ff;
+}
+
+.highlightedButton {
+
+	background-color: grey;
+
 }
 
 textarea {
 
-width: 40vh;
-height: 100vh;
-display: none;
-float: left;
-
-
-
+	resize:none;
+	border-top:none;
+	border-color: grey;
 }
 
+.panel{
+
+	float: left;
+	width: 50vh;
+	border-left: none;
+}
+
+iframe	{
+
+	border:none;
+}
+
+.hidden {
+
+	display: none;
+}
