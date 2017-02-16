@@ -17,10 +17,10 @@
 	
 	<div id ="buttonInfo">
 		
-		<button id ="htmlButton">HTML</button>
-		<button id ="cssButton">CSS</button>
-		<button id ="jsButton">JavaScript</button>
-		<button id ="outputButton">Output</button>
+		<button id ="htmlButton" class ="buttons active">HTML</button>
+		<button id ="cssButton" class="buttons">CSS</button>
+		<button id ="jsButton" class="buttons">JavaScript</button>
+		<button id ="outputButton" class= "buttons active">Output</button>
 	</div>
 
 
@@ -28,94 +28,52 @@
 
 </div>
 
-<div id="htmlBar">HTML</div>
+<textarea id ="htmlBar">Hello World!
+<p>This is some text</p>
 
-<div id="cssBar">CSS</div>
+</textarea>
 
-<div id ="jsBar">JavaScript</div>
+<textarea id="cssBar"></textarea>
 
-<div id="outputBar">OutPut</div>
+<textarea id ="jsBar"></textarea>
+
+<textarea id="outputBar"></textarea>
 
 <script type="text/javascript">
 	
-	
-	$('#htmlButton').click(function() {
+	var htmlinfo = $('#htmlBar').val();
+	var outputinfo = "";
 
-		if ($("#htmlBar").css("display")==
-			"none") {
+	console.log(htmlinfo);
 
-			$('#htmlBar').css({"display": "block"
+	$( "button" ).click(function() {
 
-		}).show().animate(
-		{height: 752, width: 300}, 0)
+  $( this ).toggleClass( "active" );
+ if ( $(this).attr('id')  == 'htmlButton') {
 
+ 		$('#htmlBar').toggle();
+ }
 
-		} else {
+  if ( $(this).attr('id')  == 'cssButton') {
 
-			$('#htmlBar').hide();
-		}			
+ 		$('#cssBar').toggle();
+ }
 
-		
-	});
+if ( $(this).attr('id')  == 'jsButton') {
 
-	$('#cssButton').click(function() {
+ 		$('#jsBar').toggle();
+ }
 
-		if ($("#cssBar").css("display")==
-			"none") {
+ if ( $(this).attr('id')  == 'outputButton') {
 
-			$('#cssBar').css({"display": "inline-block"
-
-		}).show().animate(
-		{height: 752, width: 300}, 0)
-
-
-		} else {
-
-			$('#cssBar').hide();
-		}			
-
-		
-	});
+ 		$('#outputBar').toggle();
+ 		
+ 		
+ }
 
 
-	$('#jsButton').click(function() {
 
-		if ($("#jsBar").css("display")==
-			"none") {
-
-			$('#jsBar').css({"display": "inline-block"
-
-		}).show().animate(
-		{height: 752, width: 300}, 0)
-
-
-		} else {
-
-			$('#jsBar').hide();
-		}			
-
-		
-	});
-
-	$('#outputButton').click(function() {
-
-		if ($("#outputBar").css("display")==
-			"none") {
-
-			$('#outputBar').css({"display": "inline-block"
-
-		}).show().animate(
-		{height: 752, width: 300}, 0)
-
-
-		} else {
-
-			$('#outputBar').hide();
-		}			
-
-		
-	});
-
+});
 
 		
 	

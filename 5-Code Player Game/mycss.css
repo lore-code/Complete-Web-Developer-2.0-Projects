@@ -33,45 +33,30 @@ h1 {
 	height: 50px;
 }
 
-#buttonInfo button {
+button {
 
 	height: 50px;
-	background-color: lightblue;
-
-
 }
-
-#htmlBar {
-
-	display: none;
-	border-right: 5px solid black;
-	float: left;
-}
-
-#cssBar {
-
-	display: none;
-	border-right: 5px solid black;
-	float: left;
-	margin: 0 auto;
+.buttons {
 
 	
+color: black;
 
 }
 
-#jsBar {
+.active {
 
-	display: none;
-	border-right: 5px solid black;
-	float: left;
-	margin: 0 auto;
+	background-color: lightblue;
+}
+
+textarea {
+
+width: 40vh;
+height: 100vh;
+display: none;
+float: left;
+
+
 
 }
 
-#outputBar {
-
-	display: none;
-	border-right: 5px solid black;
-	float: left;
-	margin: 0 auto;
-}
