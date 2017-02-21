@@ -9,13 +9,88 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+    <!-- Font Awesome CSS -->
+
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        
+    body   {
+
+        font-size: 20px;
+    }
+
+
+    .jumbotron {
+
+        text-align: center;
+        background-image: url("images/jtpic.jpg");
+    }
+
+    .fa-at {
+
+        background-color: #dedede;
+        border: 1px black solid;
+        border-style: 5px;
+    }
+
 
     </style>
+
   </head>
   
-<body >
+<body>
 
-<h1>Bootstrap Project</h1>
+        <!-- Navbar section -->
+
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">MyApp</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download The App</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="E-mail" placeholder="E-mail">
+              <input class="form-control mr-sm-2" type="Password" placeholder="Password">
+              <button class="btn btn-success my-2 my-sm-0" type="submit" >Login</button>
+            </form>
+          </div>
+        </nav>
+
+
+
+        <!-- jumbotron section -->
+
+        <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-2">My Awesome App</h1>
+    <p class="lead">This is why YOU should download this awesome app!</p>
+    <hr>
+    <p>Want to know more? Joing our mailing list! </p>
+    <form class="form-inline my-3 my-lg-1 container">
+        <div class="container">
+            <i class="fa fa-at" aria-hidden="true"></i>
+              <input class="form-control mr-sm-2" type="E-mail" placeholder="Your email">
+              <button class="btn btn-primary my-2 my-sm-0" type="submit" >Sign Up</button>
+
+              </div>
+            </form>
+
+    
+  </div>
+</div>
    
 
 
