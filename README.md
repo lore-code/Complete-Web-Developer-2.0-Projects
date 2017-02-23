@@ -19,5 +19,12 @@ Tried doing it on my own got about half way through but after following the tuto
 
 Link: http://79.170.44.135/lorefirstsitecwd2.com/5-CodePlayer/index.html
 
+Project 6- Bootstrap
+
+Did this on my own...after looking at what his was. Will still be doing the project but not uploading it. 
+Here is the link to my version: 
+
+http://79.170.44.135/lorefirstsitecwd2.com/6-Bootstrap/bootstrap.html
+
 
 
