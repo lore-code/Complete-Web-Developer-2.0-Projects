@@ -21,11 +21,17 @@
         text-align: center;
     }
 
+    nav {
+
+        margin-bottom: 20px;
+    }
+
 
     .jumbotron {
 
         text-align: center;
         background-image: url("images/jtpic.jpg");
+        margin-top: 40px;
     }
 
     #cards {
@@ -42,9 +48,21 @@
 
     
         margin-top: 80px;
-        background-color: blue;
+        background-color: #7FDBFF;
         height: 400px;
         text-align: center;
+    }
+
+    #text {
+
+        position: relative;
+        top: 130px;
+    }
+
+    #text1{
+
+        font-size: 30px;
+        font-weight: 2px;
     }
 
 
@@ -63,7 +81,7 @@
 
         <!-- Navbar section -->
 
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -75,13 +93,15 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#jumbo">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Download The App</a>
+                <a class="nav-link" href="#bottom">Download The App</a>
               </li>
             </ul>
+
             <form class="form-inline my-2 my-lg-0">
+
               <input class="form-control mr-sm-2" type="E-mail" placeholder="E-mail">
               <input class="form-control mr-sm-2" type="Password" placeholder="Password">
               <button class="btn btn-success my-2 my-sm-0" type="submit" >Login</button>
@@ -94,7 +114,7 @@
         <!-- jumbotron section -->
 
         <div class="jumbotron jumbotron-fluid">
-  <div class="container">
+  <div class="container" id="jumbo">
     <h1 class="display-2">My Awesome App</h1>
     <p class="lead">This is why YOU should download this awesome app!</p>
     <hr>
@@ -155,7 +175,14 @@
 
             <div class="container-fluid" id="bottom">
 
-                <h2>Hello!</h2>
+            <div id="text">
+                    <p id="text1">Download the App!</p>
+    <p class="lead">Really, why should I get this app?</p>
+
+             <a href="#"><img src="images/download (1).png"></a>
+
+            </div>
+               
 
             </div>
 
